@@ -54,7 +54,7 @@ function applyBulkDiscount(orders, discountFunction){  // creates a function
 console.log(`**Task 6**\nUpdated Orders: ${applyBulkDiscount(orders,amount => amount > 500 ? amount*.9 :amount)}\n`);
 
 
-// Task 7- Business Expense Tracker
+//Task 7- Business Expense Tracker
 function createExpenseTracker(){
     // retaurns expenseTracker
     let sum = 0;
@@ -67,3 +67,15 @@ let tracker =  createExpenseTracker() // renames function to tracker
 console.log(`**Task 7**`); // for clarity in the console.log
 tracker(200); // calls function 
 tracker(150); // calls function
+
+
+//Task 8 - Employee Promotion Evaluation
+let  calculateYearsToPromotion = (employeeLevel) => {
+    if(employeeLevel >= 10){  //  returns 0 if employee level reaches 10 t0 stop further calls
+        return 0;
+    }
+    return calculateYearsToPromotion(employeeLevel +1) +2; // returns employee level +1 if the employee level is less than 10. each call adds + 2 years
+};
+console.log('\n** Task 8 **'); // for readability in the console.log
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}\nYears to Level 10: ${calculateYearsToPromotion(5)}`); 
+
