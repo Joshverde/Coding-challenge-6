@@ -16,3 +16,14 @@ function calculateSalesTax(amount,taxRate){
 };
 
 console.log(`**Task 2**\nSales Tax: ${calculateSalesTax(100,.07)}\nSales Tax: ${calculateSalesTax(500,.1)}\n`);
+
+
+//Task 3 - Employee Bonus Calculation
+let calculateBonus = (salary,performanceRating) => 
+    //expression determines  if plan is Excellent, good, or average and generates the cost
+    performanceRating === "Excellent" ? (salary *.20):  // option returned if rating is Excellent
+    performanceRating === "Good" ? (salary *.10):// option returned if rating is good
+    performanceRating === "Average" ? (salary *.05): // option returned if rating is Average
+    0;// ensures default is 0
+
+console.log(`**Task 3**\nBonus: ${calculateBonus(5000, "Excellent")}\nBonus: ${calculateBonus(7000,"Good")}\n`);
