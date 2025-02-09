@@ -36,5 +36,12 @@ let calculateSubscriptionCost = (plan,months,discount=0) => // creates an arrow 
     plan === "Premium" ? (months*20 - discount) : // premium plan calculation
     plan === "Enterprise" ? (months*50 - discount):    // enterprise plan calculation       
     0; // ensures default to 0
-    
+
 console.log(`**Task 4**\nTotal Cost: ${calculateSubscriptionCost("Basic",6,10)}\nTotal Cost: ${calculateSubscriptionCost("Premium",12,0)}\n`);
+
+
+// Task 5 - Currency Conversion
+let convertCurrency = (amount,ExchangeRate) =>  amount * ExchangeRate; // creates an arrow function that exchanges currency
+console.log(`**Task 5**\nCurrency conversion: $${convertCurrency(100,1.1)}\nCurrency Conversion: $${convertCurrency(250,.85)}\n`);
+
+
