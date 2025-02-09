@@ -27,3 +27,14 @@ let calculateBonus = (salary,performanceRating) =>
     0;// ensures default is 0
 
 console.log(`**Task 3**\nBonus: ${calculateBonus(5000, "Excellent")}\nBonus: ${calculateBonus(7000,"Good")}\n`);
+
+
+//Task 4 - Subscription Pricing Model
+let calculateSubscriptionCost = (plan,months,discount=0) => // creates an arrow function
+    // ternary expression determines  if plan is Excellent, good, or average and generates the cost
+    plan === "Basic" ? (months*10 - discount) :  // basic plan calculation
+    plan === "Premium" ? (months*20 - discount) : // premium plan calculation
+    plan === "Enterprise" ? (months*50 - discount):    // enterprise plan calculation       
+    0; // ensures default to 0
+    
+console.log(`**Task 4**\nTotal Cost: ${calculateSubscriptionCost("Basic",6,10)}\nTotal Cost: ${calculateSubscriptionCost("Premium",12,0)}\n`);
