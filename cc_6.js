@@ -45,3 +45,10 @@ let convertCurrency = (amount,ExchangeRate) =>  amount * ExchangeRate; // create
 console.log(`**Task 5**\nCurrency conversion: $${convertCurrency(100,1.1)}\nCurrency Conversion: $${convertCurrency(250,.85)}\n`);
 
 
+//Task - 6 Higher-Order Function for Bulk Orders
+let orders = [200,600,1200,450,800]; // creates an array with values
+function applyBulkDiscount(orders, discountFunction){  // creates a function 
+    // returns a new array using the .map method and the discount function code 
+    return orders.map(discountFunction);
+};
+console.log(`**Task 6**\nUpdated Orders: ${applyBulkDiscount(orders,amount => amount > 500 ? amount*.9 :amount)}\n`);
